@@ -1,0 +1,7 @@
+node_modules/
+tmp/
+typings/
+client/dest/
+.sass-cache
+.vscode/
+.idea/

@@ -1,0 +1,270 @@
+@import "color";
+
+img {
+  width: 30px;
+  height: 30px;
+}
+
+.app-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 1920px;
+  height: 1080px;
+  margin: auto;
+  background-color: @bgColor;
+
+}
+
+.sample-data {
+  width: 50%;
+  float: left;
+  height: 540px;
+  &:nth-child(1){
+    border-right:1px solid @subTitleColor;
+  }
+  &:nth-child(3){
+    border-top:1px solid @subTitleColor;
+    border-right:1px solid @subTitleColor;
+  }
+  &:nth-child(4){
+    border-top:1px solid @subTitleColor;
+  }
+}
+
+
+.header {
+  height: 48px;
+  overflow: hidden;
+  padding: 0 12px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid @subTitleColor;
+  color: @titleColor;
+  div {
+    display: flex;
+    align-items: center;
+    font-size: 24px
+  }
+  .right{
+    font-size: 18px;
+    img.dateIcon{
+      display: none;
+    }
+  }
+
+  img {
+    margin-right: 12px;
+  }
+  .helpIcon {
+    margin-left: 12px;
+    margin-right: 0;
+  }
+}
+
+.info-wrapper{
+  display: block;
+  height: 160px;
+  border-bottom: 1px solid @subTitleColor;
+  color: @themesColor4;
+  & > div{
+    width: 50%;
+    height:100%;
+    float: left;
+    & > ul{
+      height:100%;
+      & > li{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 12px;
+        &:first-of-type{
+          height: 40%;
+        }
+        &:last-of-type{
+          height: 60%;
+        }
+      }
+    }
+  }
+
+  .unit{
+    color: @themesColor1;
+  }
+}
+
+.completion-rate{
+  padding: 12px;
+  border-right: 1px solid @subTitleColor;
+  .text-block{
+    border-bottom: 2px solid @themesColor4;
+    align-items: flex-end;
+    .num{
+      font-size: 32px;
+      margin-right: 24px;
+    }
+  }
+
+  .chart-block{
+    .progress-wrapper{
+      display: flex;
+      flex-grow: 1;
+      background-color: white;
+      .progress-bar{
+        background-color: @themesColor1;
+        width: 0%;
+        transition: width 1s ease;
+        padding: 12px 0;
+        text-align: center;
+        white-space: nowrap;
+        span{
+          color: @titleColor;
+          padding: 0 12px;
+        }
+      }
+    }
+  }
+
+  img{
+    margin-right: 24px;
+  }
+}
+.last-period{
+  padding: 12px;
+
+  .title{
+    margin-right: 24px;
+  }
+
+  .period-desc{
+    &>div{
+      flex-basis: 50%;
+    }
+
+    .desc-one{
+      .title{
+        font-size: 24px;
+      }
+      .data{
+        color: @themesColor1;
+      }
+    }
+
+    .desc-two{
+      .title{
+        color: @titleColor;
+      }
+    }
+  }
+
+  .period-text{
+    border-bottom: 2px solid @themesColor4;
+    align-items: flex-end;
+    .title{
+      color: @titleColor;
+      font-size: 24px;
+    }
+
+    .data{
+      color: @subTitleColor;
+    }
+  }
+
+}
+
+
+
+
+
+
+.chart-wrapper{
+  display: block;
+  height: 332px;
+  &:after{
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  & > div{
+    float: left;
+    height: 100%;
+  }
+
+  .chart-left{
+    padding: 12px 8px 12px 2px;
+    width: 76%;
+    border-right: 1px solid @subTitleColor;
+    background-color: @bgColor-dp;
+    .chart{
+      height: 100%;
+    }
+  }
+
+  .chart-right{
+    width: 24%;
+    .update-cycle{
+      color: @themesColor1;
+      display: flex;
+      padding: 12px;
+      flex-direction: column;
+      height:96px;
+      border-bottom: 1px solid @subTitleColor;
+
+      &>li{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 12px;
+        &:last-of-type{
+          margin-bottom: 0px
+        }
+      }
+    }
+
+    .query{
+      padding: 12px;
+      height: 236px;
+    }
+
+    .query-select{
+      height: 100%;
+      position: relative;
+      button{
+        position: absolute;
+        background-color: @themesColor2;
+        bottom: 0;
+        border: 0;
+        border-radius: 2px;
+        padding: 6px;
+        width: 100%;
+        color: white;
+        cursor: pointer;
+      }
+    }
+    .year-select{
+      margin-bottom: 12px;
+      color: @themesColor3;
+    }
+
+    .month-select{
+      color: @themesColor1;
+    }
+
+    .year-select, .month-select{
+      > label{
+        margin-bottom: 6px;
+        display: block;
+      }
+    }
+
+  }
+}
+
+
+
+
+
+
+

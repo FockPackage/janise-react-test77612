@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{title}}</title>
+</head>
+<link rel="stylesheet" href="/dest/css/main.css">
+<body>
+  <div id="root"></div>
+  <!--<script src="/dest/js/vendor.js"></script>-->
+  <script src="/dest/js/vendor.bundle.js"></script>
+  <script src="/dest/js/bundle.js"></script>
+  <script>
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = '{{livereloadUrl}}';
+    document.body.appendChild(script);
+  </script>
+</body>
+</html>

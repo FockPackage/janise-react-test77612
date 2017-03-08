@@ -1,0 +1,33 @@
+.nav {
+  position:fixed;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
+.nav-wrapper{
+  border: 1px solid @themesColor1;
+  background-color: @bgColor;
+  color:@themesColor1;
+
+  & li{
+    cursor: pointer;
+    padding: 6px 0;
+    border-bottom: 1px solid @themesColor1;
+
+    &:last-of-type{
+      border-bottom: none;
+    }
+    a{
+      color: @themesColor1;
+    }
+}
+}
+
+.nav-button{
+  width: 0;
+  height:0;
+  border-bottom: 40px solid @themesColor3;
+  border-right: 40px solid transparent;
+  cursor: pointer;
+}
